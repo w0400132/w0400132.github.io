@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+        <link type="text/css" href="styles.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quiz</title>
+    <script src = "mainQuiz.js">
+            
+    </script>
+</head>
+<body>
+    <button onclick="window.location.href='workIndex.html'">Back to work examples</button>
+    <div id="generatequiz">
+        <h1>Generate a quiz:</h1>
+        <p>Choose a Category:</p>
+        <select id = "category">
+            <option value="all">All</option>
+        </select>
+        <p>Choose Difficulty:</p>
+        <select id="difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+        </select>
+        <p>Choose a Number of Questions:</p>
+        <input id="numberofquestions" type="number" min="1" value="10"></input>
+        <button id="startbutton" >Start Quiz.</button>
+    </div>
+    <div id="questionpage">
+        <h1 id="questionheader"></h1>
+        <h3 id="question"></h3>
+        <h1 class="feedback" id="correct">Correct!</h1>
+        <h1 class="feedback" id="incorrect">Incorrect!</h1>
+        <form id="questionForm">
+            <input class="radio" id="option1"  type="radio" name="answer"><br>
+            <input class="radio" id="option2" type="radio" name="answer"><br>
+            <input class="radio" id="option3" type="radio" name="answer"><br>
+            <input class="radio" id="option4" type="radio" name="answer"><br>
+            
+        </form>
+        <button id="questionSubmitButton">Submit</button>
+    </div>
+    <div id="resultspage">
+        <h1>Final Score:</h1>
+        <h2 id="finalscore"></h2>
+        <button id="playagain">Play Again</button>
+        
+    </div>
+</body>
+</html>
